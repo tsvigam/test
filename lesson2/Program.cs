@@ -29,8 +29,22 @@ namespace lesson2
                 Console.WriteLine("No");
             }
         }
+        static void FuncEnum(Toyota model1, Toyota model2)
+        {
+            if (model1 == Toyota.Prius)
+            {
+                Console.WriteLine(Toyota.Prius.ToString());
+            }
+        }
+        enum Toyota
+        {
+            Corolla,
+            Prius,
+            Lexus
+        }
         static void Main(string[] args)
         {
+            FuncEnum(Toyota.Prius, Toyota.Prius);
             FuncDouble();
             Func();
             Writer.Write();
