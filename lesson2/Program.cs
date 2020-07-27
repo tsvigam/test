@@ -6,15 +6,32 @@ namespace lesson2
 {
     class Program
     {
-       static void Func()
-       {
+        static void Func()
+        {
             sbyte a = -100;
             byte b = 5;
             short c = (short)(b + a);
             Console.WriteLine(c + " type " + c.GetType());
-       }
+        }
+        static void FuncDouble()
+        {
+            float a = 0.75f;
+            a += 1;
+            float b = 3f / 4;
+            decimal c = 0.75M;
+            if (c == 3M / 4 )
+            { 
+                Console.Write("Yes");
+                Console.WriteLine(a+" "+b);
+            }
+            else
+            {
+                Console.WriteLine("No");
+            }
+        }
         static void Main(string[] args)
         {
+            FuncDouble();
             Func();
             Writer.Write();
             var salmons = new List<string>();
